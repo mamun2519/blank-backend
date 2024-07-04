@@ -27,3 +27,13 @@ app.get("/", (req: Request, res: Response) => {
     StatusCodes: 404,
   });
 });
+
+// Application Route---------------
+app.use("/api/v1", ApplicationRoute);
+
+//Root Route-----------
+app.get("/", (req: Request, res: Response) => {
+  res.status(StatusCodes.OK).send({
+    StatusCodes: 404,
+  });
+});
