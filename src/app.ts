@@ -37,3 +37,14 @@ app.get("/", (req: Request, res: Response) => {
     StatusCodes: 404,
   });
 });
+
+// Handle Not Found API -------
+app.use((req: Request, res: Response, next: NextFunction) => {
+  res.status(StatusCodes.NOT_FOUND).send({
+    success: false,
+  });
+  next();
+});
+
+// handle global error
+app.use(globalErrorHandler);
