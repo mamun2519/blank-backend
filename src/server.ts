@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
-import app from "./app";
+
 import config from "./config";
 import { Server } from "http";
+import app from "./app";
 const serverBootStrep = async () => {
   try {
     //connect database

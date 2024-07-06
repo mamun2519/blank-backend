@@ -48,3 +48,5 @@ app.use((req: Request, res: Response, next: NextFunction) => {
 
 // handle global error
 app.use(globalErrorHandler);
+
+export default app;
