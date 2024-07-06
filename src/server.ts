@@ -2,12 +2,12 @@ import app from "./app";
 const serverBootStrep = async () => {
   try {
     //connect database
-    //     await mongoose.connect(config.database_url as string);
-    //     console.log("database connect..........");
+    await mongoose.connect(config.database_url as string);
+    console.log("database connect..........");
 
-    //     const server: Server = app.listen(config.port, () => {
-    //       console.log(`server Is Running Successfully On PORT NO- ${config.port}`);
-    //     });
+    const server: Server = app.listen(config.port, () => {
+      console.log(`server Is Running Successfully On PORT NO- ${config.port}`);
+    });
 
     // exist Server----
     const existHandler = () => {
