@@ -1,3 +1,4 @@
+import app from "./app";
 const serverBootStrep = async () => {
   try {
     //connect database
@@ -9,16 +10,16 @@ const serverBootStrep = async () => {
     //     });
 
     // exist Server----
-    //     const existHandler = () => {
-    //       if (server) {
-    //         server.close(() => {
-    //           console.log("Opps Server Is Closed...");
-    //           process.exit(1);
-    //         });
-    //       } else {
-    //         process.exit(1);
-    //       }
-    //     };
+    const existHandler = () => {
+      if (server) {
+        server.close(() => {
+          console.log("Opps Server Is Closed...");
+          process.exit(1);
+        });
+      } else {
+        process.exit(1);
+      }
+    };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const unexpectedErrorHandler = (error: any) => {
