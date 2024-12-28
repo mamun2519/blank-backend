@@ -29,7 +29,7 @@ app.get("/", (req: Request, res: Response) => {
 });
 
 // Application Route---------------
-app.use("/api/v1", ApplicationRoute);
+// app.use("/api/v1", ApplicationRoute);
 
 //Root Route-----------
 app.get("/", (req: Request, res: Response) => {
